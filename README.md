@@ -3,4 +3,8 @@
 
 Aplicação responsável por **notificar todos os jogadores** sempre que algum Pokémon for **colocado para troca**. Além disso, deve **receber, armazenar e notificar as propostas de trocas** feitas pelos outros jogadores para que o solicitante possa escolher qual das propostas aceitar. 
 
+**Os princípios de solid que iremos usar:** https://www.canva.com/design/DAGkucCKAas/dfo_d_67zf0J_g0TA3c5uA/view?utm_content=DAGkucCKAas&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h190a1a47ba
+
 **Os padrões arquiteturais que iremos usar:** https://www.canva.com/design/DAGnRcj96-U/3PBe9dbXJCav18SNU1Po4w/view?utm_content=DAGnRcj96-U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab32823dda
+
+**Os design patterns que iremos usar:** https://www.canva.com/design/DAGp4y7t9Gg/RWByOQeCcXZvNekAFrJoTA/view?utm_content=DAGp4y7t9Gg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd3c8168760
