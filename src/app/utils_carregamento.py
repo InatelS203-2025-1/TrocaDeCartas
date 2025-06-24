@@ -1,4 +1,3 @@
-
 import json
 from app.models.jogador import Jogador
 from app.models.pokemon import Pokemon
@@ -17,9 +16,17 @@ def carregar_dados_do_json(caminho_arquivo):
     for p in dados["pokemons"]:
         pokemon = Pokemon(p["id"], p["nome"], p["status"], p["nivel"])
         pokemon.dono_id = p.get("dono_id")
-        pokemons_disponiveis[pokemon.nome.lower()] = pokemon
+        pokemons_disponiveis[pokemon.id] = pokemon
+
+    
+    # Associar Pokémon aos jogadores
+    for pokemon in pokemons_disponiveis.values():
+        dono_id = pokemon.dono_id
+        if dono_id in jogadores:
+            jogadores[dono_id].pokemons.append(pokemon)
 
     return jogadores, pokemons_disponiveis
+    
 
 from app.models.troca import Troca
 
