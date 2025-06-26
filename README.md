@@ -1,4 +1,8 @@
-# Grupo8 - Sistema de Trocas
+<h1>
+  <img src="https://cdn2.steamgriddb.com/icon_thumb/9a9edc1720f84b8907d3b7f81c1fbb50.png" width="60" style="vertical-align: middle; margin-right: 6px;" />
+  Sistema de Trocas - Grupo 8 
+</h1>
+
 > Integrantes: Iury Teixeira de Souza, José Carlos Rebouças Neto, Matheus Vieira Honório de Souza
 
 Este é um sistema de backend para trocas de cartas Pokémon entre jogadores, utilizando FastAPI, MQTT (via Mosquitto) e JSON como persistência. O projeto faz parte de um mock de sistema distribuído com troca de mensagens assíncronas.
