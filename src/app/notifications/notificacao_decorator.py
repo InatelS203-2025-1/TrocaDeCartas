@@ -1,6 +1,7 @@
+from app.notifications.inotificacao import INotificacao
 
 class NotificacaoDecorator:
-    def __init__(self, notificacao):
+    def init(self, notificacao: INotificacao):
         self._notificacao = notificacao
 
     def notificar(self, jogador, mensagem):

@@ -1,11 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List
-import json
 import paho.mqtt.publish as publish
-
-from app.models.jogador import Jogador
-from app.models.pokemon import Pokemon
+from app.services.validadores import ValidadorNivel, ValidadorStatus
 from app.models.troca import Troca
 from app.notifications.notificacao_jogador import NotificacaoJogador
 from app.services.gerenciador_troca import GerenciadorDeTroca
@@ -43,6 +39,11 @@ def criar_proposta(proposta: PropostaInput):
         pokemon_desejado = next((p for p in jogador_destino.pokemons if p.id == int(proposta.pokemon_desejado_id)), None)
         if not pokemon_oferecido or not pokemon_desejado:
             raise HTTPException(status_code=404, detail="Pokémon não encontrado")
+
+        troca_temp = Troca("temp", jogador_origem, jogador_destino, pokemon_oferecido, pokemon_desejado)
+        validador = ValidadorStatus(ValidadorNivel())
+        if not validador.validar(troca_temp):
+            raise HTTPException(status_code=400, detail="Proposta inválida por regras de validação")
 
         nova_troca = Troca(str(uuid4()), jogador_origem, jogador_destino, pokemon_oferecido, pokemon_desejado)
         gerenciador.enviar_proposta(nova_troca)
