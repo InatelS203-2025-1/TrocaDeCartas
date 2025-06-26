@@ -1,5 +1,5 @@
 <h1>
-  <img src="https://cdn2.steamgriddb.com/icon_thumb/9a9edc1720f84b8907d3b7f81c1fbb50.png" width="60" style="vertical-align: middle; margin-right: 6px;" />
+  <img src="https://cdn2.steamgriddb.com/icon_thumb/9a9edc1720f84b8907d3b7f81c1fbb50.png" width="60" style="vertical-align: middle; margin-right: 15px;" />
   Sistema de Trocas - Grupo 8 
 </h1>
 
